@@ -27,14 +27,20 @@ x∧(y∨z) = x∧y∨x∧z
 
 ```
 
-<S> ::= <conj> <disj_tail>
-<disj_tail> ::= ∨ <conj> <disj_tail> | ε
-<conj> ::= <expr> <conj_tail>
-<conj_tail> ::= ∧ <expr> <conj_tail> | ε
-<expr> ::= <var> | ( <S> ) | ¬ <expr>
-<var> ::= x <var_tail>
-<var_tail> ::= 0 <var_tail> | 1 <var_tail> | ε
+<S> 		::= <conj> <disj_tail>
+<disj_tail>	::= ∨ <conj> <disj_tail> | ε
+<conj>		::= <expr> <conj_tail>
+<conj_tail>	::= ∧ <expr> <conj_tail> | ε
+<expr>		::= <var> | ( <S> ) | ¬ <expr>
+<var>		::= x <var_tail>
+<var_tail>	::= 0 <var_tail> | 1 <var_tail> | ε
 
 ```
 
 > Вроде даже получилось LL(1) 
+
+## Формулировка алгоритма сравнения поддеревьев
+
+## Ассимптотика
+
+Ассимптотика классического алгоритма O(2^n). Для недетерминированной машины Тьюринга эта задача является полиномиальной - NP-полной.
